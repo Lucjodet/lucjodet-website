@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luc Jodet — Entrepreneur, Investor, Researcher</title>
+<meta name="description" content="Luc Jodet is an entrepreneur and investor — co-founder of Arianee, partner at XAnge — now pursuing a PhD on AI and job displacement.">
+<style>
+  :root {
+    --ink: #1a1a18;
+    --ink-soft: #55524c;
+    --ink-faint: #8a867e;
+    --paper: #faf9f6;
+    --paper-deep: #f2f0ea;
+    --line: #e3e0d8;
+    --accent: #8c3b23;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Nav ---------- */
+  header.site {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(250,249,246,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .nav .brand {
+    font-size: 17px; letter-spacing: 0.16em; text-transform: uppercase;
+    font-family: var(--sans); font-weight: 600; color: var(--ink);
+    text-decoration: none;
+  }
+  .nav ul { list-style: none; display: flex; gap: 26px; }
+  .nav a.link {
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.12em;
+    text-transform: uppercase; text-decoration: none; color: var(--ink-soft);
+    transition: color .2s;
+  }
+  .nav a.link:hover { color: var(--accent); }
+  @media (max-width: 640px) { .nav ul { gap: 16px; } .nav a.link { font-size: 11px; } }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 90px 0 70px; }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center;
+  }
+  @media (max-width: 720px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .kicker {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 18px;
+  }
+  h1 {
+    font-size: clamp(44px, 7vw, 68px); line-height: 1.05; font-weight: 500;
+    letter-spacing: -0.015em; margin-bottom: 24px;
+  }
+  .hero p.lede { font-size: 21px; color: var(--ink-soft); max-width: 34em; }
+  .hero p.lede em { font-style: italic; color: var(--ink); }
+  .hero-links { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; padding: 12px 22px; border: 1px solid var(--ink);
+    color: var(--ink); transition: all .2s;
+  }
+  .btn:hover { background: var(--ink); color: var(--paper); }
+  .btn.ghost { border-color: var(--line); color: var(--ink-soft); }
+  .btn.ghost:hover { border-color: var(--ink); background: transparent; color: var(--ink); }
+
+  .portrait-frame { position: relative; }
+  .portrait-frame::after {
+    content: ""; position: absolute; inset: 14px -14px -14px 14px;
+    border: 1px solid var(--line); z-index: 0;
+  }
+  .portrait {
+    position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5;
+    object-fit: cover; display: block; background: var(--paper-deep);
+    filter: saturate(0.92);
+  }
+  .portrait-fallback {
+    position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5;
+    display: none; align-items: center; justify-content: center;
+    background: var(--paper-deep); color: var(--ink-faint);
+    font-size: 64px; letter-spacing: 0.05em;
+  }
+  .caption {
+    font-family: var(--sans); font-size: 12px; color: var(--ink-faint);
+    margin-top: 22px; letter-spacing: 0.04em;
+  }
+
+  /* ---------- Sections ---------- */
+  section { padding: 70px 0; border-top: 1px solid var(--line); }
+  .sec-head { display: flex; align-items: baseline; gap: 22px; margin-bottom: 42px; }
+  .sec-num { font-family: var(--sans); font-size: 12px; color: var(--accent); letter-spacing: 0.15em; }
+  h2 { font-size: 32px; font-weight: 500; letter-spacing: -0.01em; }
+
+  .prose p { margin-bottom: 1.2em; max-width: 42em; color: var(--ink-soft); }
+  .prose p strong { color: var(--ink); font-weight: 600; }
+  .prose p:last-child { margin-bottom: 0; }
+
+  /* Research callout */
+  .research-card {
+    background: var(--paper-deep); border-left: 3px solid var(--accent);
+    padding: 34px 38px; margin-top: 38px; max-width: 46em;
+  }
+  .research-card h3 { font-size: 22px; font-weight: 600; margin-bottom: 12px; }
+  .research-card p { color: var(--ink-soft); }
+  .research-card .tag {
+    display: inline-block; font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  /* Ventures */
+  .ventures { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  @media (max-width: 640px) { .ventures { grid-template-columns: 1fr; } }
+  .venture { background: var(--paper); padding: 30px 30px 34px; }
+  .venture .years { font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; color: var(--ink-faint); text-transform: uppercase; }
+  .venture h3 { font-size: 21px; font-weight: 600; margin: 10px 0 4px; }
+  .venture .role { font-family: var(--sans); font-size: 13px; color: var(--accent); margin-bottom: 12px; }
+  .venture p { font-size: 16px; color: var(--ink-soft); }
+
+  /* Press list */
+  .press-list { list-style: none; }
+  .press-list li { border-bottom: 1px solid var(--line); }
+  .press-list li:first-child { border-top: 1px solid var(--line); }
+  .press-list a {
+    display: grid; grid-template-columns: 150px 1fr 60px; gap: 20px; align-items: baseline;
+    padding: 20px 6px; text-decoration: none; color: inherit; transition: background .2s;
+  }
+  .press-list a:hover { background: var(--paper-deep); }
+  @media (max-width: 640px) { .press-list a { grid-template-columns: 1fr; gap: 4px; } }
+  .press-outlet { font-family: var(--sans); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+  .press-title { font-size: 19px; }
+  .press-title span.note { display: block; font-size: 14px; color: var(--ink-faint); font-family: var(--sans); margin-top: 3px; }
+  .press-year { font-family: var(--sans); font-size: 13px; color: var(--ink-faint); text-align: right; }
+  @media (max-width: 640px) { .press-year { text-align: left; } }
+
+  /* Talks */
+  .talks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-bottom: 46px; }
+  @media (max-width: 720px) { .talks-grid { grid-template-columns: 1fr; } }
+  .talk-card { text-decoration: none; color: inherit; display: block; }
+  .talk-card .thumb {
+    width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+    background: var(--paper-deep); filter: saturate(0.9); transition: filter .2s;
+  }
+  .talk-card:hover .thumb { filter: saturate(1.05); }
+  .talk-card .t-label { font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 14px 0 4px; }
+  .talk-card .t-title { font-size: 17px; line-height: 1.4; }
+  .talks-more { list-style: none; max-width: 46em; }
+  .talks-more li {
+    display: flex; justify-content: space-between; gap: 20px; align-items: baseline;
+    padding: 14px 6px; border-bottom: 1px solid var(--line);
+  }
+  .talks-more li:first-child { border-top: 1px solid var(--line); }
+  .talks-more .ev { font-size: 18px; }
+  .talks-more .ev span { font-family: var(--sans); font-size: 13px; color: var(--ink-faint); display: block; }
+  .talks-more .yr { font-family: var(--sans); font-size: 13px; color: var(--ink-faint); white-space: nowrap; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--line); padding: 70px 0 60px; background: var(--paper-deep); }
+  footer h2 { margin-bottom: 18px; }
+  footer p { color: var(--ink-soft); max-width: 36em; margin-bottom: 28px; }
+  .foot-links { display: flex; gap: 26px; flex-wrap: wrap; margin-bottom: 44px; }
+  .foot-links a {
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 3px;
+  }
+  .foot-links a:hover { color: var(--accent); }
+  .colophon { font-family: var(--sans); font-size: 12px; color: var(--ink-faint); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Luc Jodet</a>
+    <ul>
+      <li><a class="link" href="#about">About</a></li>
+      <li><a class="link" href="#research">Research</a></li>
+      <li><a class="link" href="#press">Press</a></li>
+      <li><a class="link" href="#talks">Talks</a></li>
+      <li><a class="link" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">Entrepreneur · Investor · Researcher</p>
+        <h1>Luc Jodet</h1>
+        <p class="lede">Co-founder of <em>Arianee</em>, partner at <em>XAnge</em> — now researching how artificial intelligence is reshaping work, as a PhD candidate at EPFL studying <em>AI and job displacement</em>.</p>
+        <div class="hero-links">
+          <a class="btn" href="#research">Current research</a>
+          <a class="btn ghost" href="#press">Press &amp; talks</a>
+        </div>
+      </div>
+      <div>
+        <div class="portrait-frame">
+          <img class="portrait" src="https://nftfactoryparis.com/wp-content/uploads/2022/10/founder-copie-62.jpg" alt="Portrait of Luc Jodet" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="portrait-fallback">LJ</div>
+        </div>
+        <p class="caption">Paris, France</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">01</span><h2>About</h2></div>
+      <div class="prose">
+        <p>Luc Jodet has spent the last decade building and backing technology companies at the frontier of digital ownership. After beginning his career as a business analyst at a Fortune 500 company, he co-founded <strong>BUYECO</strong>, a Swiss renewable-energy marketplace sourcing electricity for large corporate customers — the project through which he first encountered blockchain, working on energy-traceability solutions.</p>
+        <p>In 2017 he joined the founding team of <strong>Arianee</strong>, the open protocol for digital product passports adopted by luxury houses such as Audemars Piguet and Breitling. Arianee raised a $21&nbsp;million Series&nbsp;A led by Tiger Global in 2022. He went on to co-found <strong>NFT Factory</strong>, the Paris hub for the French web3 ecosystem, and joined <strong>XAnge</strong> — one of Europe's leading early-stage venture firms — as a partner focused on web3 and crypto, backing companies such as Morpho.</p>
+        <p>He holds a master's degree in International Security, Energy and African Studies from the Paris School of International Affairs at Sciences Po, and bachelor's degrees in economics.</p>
+      </div>
+
+      <div class="ventures" style="margin-top: 48px;">
+        <div class="venture">
+          <span class="years">2017 — Present</span>
+          <h3>Arianee</h3>
+          <p class="role">Co-founder</p>
+          <p>The leading open protocol for digital product passports and tokenized brand experiences, used by global luxury and fashion houses.</p>
+        </div>
+        <div class="venture">
+          <span class="years">2022 — Present</span>
+          <h3>XAnge</h3>
+          <p class="role">Partner, Web3 &amp; Crypto</p>
+          <p>Early-stage investing at the Franco-German venture firm behind Ledger and Believe, with a focus on digital ownership and crypto infrastructure.</p>
+        </div>
+        <div class="venture">
+          <span class="years">2022 — Present</span>
+          <h3>NFT Factory</h3>
+          <p class="role">Co-founder</p>
+          <p>The Paris home of web3 — a collective of 128 builders, artists and investors anchoring the French crypto ecosystem in the heart of the city.</p>
+        </div>
+        <div class="venture">
+          <span class="years">2014 — 2017</span>
+          <h3>BUYECO</h3>
+          <p class="role">Co-founder</p>
+          <p>A Swiss renewable-energy marketplace connecting large corporate buyers with green electricity producers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">02</span><h2>Research</h2></div>
+      <div class="prose">
+        <p>After a decade operating at the edge of each successive technology wave, Luc is turning to the question that wave now poses to everyone else: <strong>what happens to work when intelligence becomes a commodity?</strong></p>
+      </div>
+      <div class="research-card">
+        <span class="tag">PhD · EPFL, Lausanne · In Progress</span>
+        <h3>AI and Job Displacement</h3>
+        <p>Doctoral research at EPFL (École Polytechnique Fédérale de Lausanne) examining how artificial intelligence transforms labor markets — which tasks and occupations are displaced, which are created, and how firms, workers and policymakers can navigate the transition. The work draws on Luc's operating experience deploying emerging technologies inside large organizations, from blockchain to AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="press">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">03</span><h2>Press &amp; Interviews</h2></div>
+      <ul class="press-list">
+        <li><a href="https://sifted.eu/articles/xange-web3-fund" target="_blank" rel="noopener">
+          <span class="press-outlet">Sifted</span>
+          <span class="press-title">Franco-German VC firm XAnge quietly winds down Web3 fund<span class="note">On XAnge's crypto strategy and Luc's role leading its web3 investing</span></span>
+          <span class="press-year">2024</span>
+        </a></li>
+        <li><a href="https://finance.yahoo.com/news/arianee-early-pioneer-nfts-luxury-080000195.html" target="_blank" rel="noopener">
+          <span class="press-outlet">CoinDesk</span>
+          <span class="press-title">Arianee, Early Pioneer of NFTs for Luxury Provenance, Raises $9.5M</span>
+          <span class="press-year">2021</span>
+        </a></li>
+        <li><a href="https://www.coindesk.com/markets/2018/06/22/fur-real-businesses-test-cryptokitties-inspired-ethereum-tech/" target="_blank" rel="noopener">
+          <span class="press-outlet">CoinDesk</span>
+          <span class="press-title">Fur Real? Businesses Test CryptoKitties-Inspired Ethereum Tech<span class="note">On Arianee's early smart-asset prototypes for watches, handbags and champagne</span></span>
+          <span class="press-year">2018</span>
+        </a></li>
+        <li><a href="https://medium.com/authority-magazine/the-future-is-now-luc-jodet-of-arianee-on-how-their-technological-innovation-will-shake-up-the-2e06213e26a2" target="_blank" rel="noopener">
+          <span class="press-outlet">Authority Magazine</span>
+          <span class="press-title">The Future Is Now: How Arianee's Innovation Will Shake Up the Tech Scene</span>
+          <span class="press-year">2021</span>
+        </a></li>
+        <li><a href="https://bittrexglobalteam.medium.com/the-future-of-digitally-connected-clothing-featuring-luc-jodet-of-arianee-20f95b19a644" target="_blank" rel="noopener">
+          <span class="press-outlet">Bittrex Global</span>
+          <span class="press-title">The Future of Digitally Connected Clothing</span>
+          <span class="press-year">2021</span>
+        </a></li>
+        <li><a href="https://www.nthround.com/podcast/arianee" target="_blank" rel="noopener">
+          <span class="press-outlet">The Modern CFO</span>
+          <span class="press-title">The Future of Finance with Arianee<span class="note">Podcast conversation on scaling finance in a web3 company</span></span>
+          <span class="press-year">2021</span>
+        </a></li>
+        <li><a href="https://www.podpage.com/runwayseries/49-luc-jodet-co-founder-arianee-les-nfts-au-coeur-de-leur-techno-depuis-2017-pour-aider-les-luxury-brands-a-renouveler-lexperience-client/" target="_blank" rel="noopener">
+          <span class="press-outlet">Runway Series</span>
+          <span class="press-title">Les NFTs au cœur de leur techno depuis 2017 <span class="note">French-language podcast on Arianee's origins in luxury</span></span>
+          <span class="press-year">2021</span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="talks">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">04</span><h2>Talks &amp; Round Tables</h2></div>
+      <div class="talks-grid">
+        <a class="talk-card" href="https://www.youtube.com/watch?v=KjEyksy0F-0" target="_blank" rel="noopener">
+          <img class="thumb" src="https://img.youtube.com/vi/KjEyksy0F-0/hqdefault.jpg" alt="Inside the mind of a web3 VC" onerror="this.style.visibility='hidden'">
+          <p class="t-label">Video · French</p>
+          <p class="t-title">Dans la tête d'un VC web3 — Ledger, Dogami, Coinhouse</p>
+        </a>
+        <a class="talk-card" href="https://www.youtube.com/watch?v=mw6j7i_YFvc" target="_blank" rel="noopener">
+          <img class="thumb" src="https://img.youtube.com/vi/mw6j7i_YFvc/hqdefault.jpg" alt="Interview at NFT Paris 2022" onerror="this.style.visibility='hidden'">
+          <p class="t-label">NFT Paris · 2022</p>
+          <p class="t-title">Fast interview with Luc Jodet of Arianee</p>
+        </a>
+        <a class="talk-card" href="https://www.youtube.com/watch?v=eTqrcYAGWT4" target="_blank" rel="noopener">
+          <img class="thumb" src="https://img.youtube.com/vi/eTqrcYAGWT4/hqdefault.jpg" alt="Live AMA with Arianee co-founder Luc Jodet" onerror="this.style.visibility='hidden'">
+          <p class="t-label">Live AMA</p>
+          <p class="t-title">Live AMA with Arianee co-founder Luc Jodet</p>
+        </a>
+      </div>
+      <ul class="talks-more">
+        <li><span class="ev">NFT.NYC <span>Speaker — the leading NFT industry conference, New York</span></span><span class="yr">2022</span></li>
+        <li><span class="ev">Blockchain Expo Europe &amp; Global <span>Speaker — enterprise blockchain conference series</span></span><span class="yr">2021–22</span></li>
+        <li><span class="ev">TechChill, Riga <span>Speaker — Baltic startup and technology conference</span></span><span class="yr">2022</span></li>
+        <li><span class="ev">Star Media Group conference, Malaysia <span>Speaker — on blockchain and digital transformation</span></span><span class="yr">2021</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>For research collaborations, speaking invitations, press inquiries, or conversations about AI and the future of work.</p>
+    <div class="foot-links">
+      <a href="mailto:lucjodet@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/lucjodet/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.crunchbase.com/person/luc-jodet" target="_blank" rel="noopener">Crunchbase</a>
+    </div>
+    <p class="colophon">© 2026 Luc Jodet</p>
+  </div>
+</footer>
+
+</body>
+</html>
