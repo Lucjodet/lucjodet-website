@@ -22,6 +22,8 @@
 <meta property="profile:last_name" content="Jodet">
 
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lucjodet">
+<meta name="twitter:creator" content="@lucjodet">
 <meta name="twitter:title" content="Luc Jodet — Entrepreneur, Investor, Researcher">
 <meta name="twitter:description" content="Luc Jodet is an entrepreneur and investor — co-founder of Arianee, partner at XAnge — now pursuing a PhD on AI and job displacement.">
 <meta name="twitter:image" content="https://lucopedia.com/assets/og-image.jpg">
@@ -29,12 +31,39 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@graph": [
+  {
+    "@type": "WebSite",
+    "@id": "https://lucopedia.com/#website",
+    "url": "https://lucopedia.com/",
+    "name": "Luc Jodet",
+    "publisher": { "@id": "https://lucopedia.com/#person" }
+  },
+  {
+    "@type": "ProfilePage",
+    "@id": "https://lucopedia.com/#profilepage",
+    "url": "https://lucopedia.com/",
+    "isPartOf": { "@id": "https://lucopedia.com/#website" },
+    "dateModified": "2026-07-29",
+    "mainEntity": { "@id": "https://lucopedia.com/#person" }
+  },
+  {
   "@type": "Person",
+  "@id": "https://lucopedia.com/#person",
+  "mainEntityOfPage": { "@id": "https://lucopedia.com/#profilepage" },
   "name": "Luc Jodet",
   "url": "https://lucopedia.com/",
   "image": "https://lucopedia.com/assets/portrait.jpg",
   "description": "Entrepreneur and investor — co-founder of Arianee, former partner at XAnge — now a PhD candidate at EPFL researching AI and job displacement.",
   "jobTitle": "PhD Candidate",
+  "email": "mailto:luc.jodet@epfl.ch",
+  "knowsAbout": [
+    "Artificial intelligence and labor markets",
+    "AI-driven job displacement",
+    "Digital product passports",
+    "Web3 and blockchain",
+    "Venture capital and early-stage investing"
+  ],
   "affiliation": {
     "@type": "CollegeOrUniversity",
     "name": "EPFL (École Polytechnique Fédérale de Lausanne)",
@@ -84,7 +113,10 @@
   ],
   "sameAs": [
     "https://www.linkedin.com/in/lucjodet/",
-    "https://www.crunchbase.com/person/luc-jodet"
+    "https://www.crunchbase.com/person/luc-jodet",
+    "https://x.com/lucjodet"
+  ]
+  }
   ]
 }
 </script>
@@ -435,7 +467,7 @@
       <div class="sec-head"><span class="sec-num">03</span><h2>Press &amp; Interviews</h2></div>
       <div class="press-grid">
         <div class="press-card">
-          <img class="thumb zoomable" src="assets/private-equity-cover.svg" alt="Private Equity Magazine cover — Les fonds se convertissent à la crypto" loading="lazy" onclick="openLightbox('assets/private-equity-cover.svg', this.alt)">
+          <img class="thumb zoomable" src="assets/private-equity-cover.jpg" alt="Private Equity Magazine cover — Les fonds se convertissent à la crypto" loading="lazy" onclick="openLightbox('assets/private-equity-cover.jpg', this.alt)">
           <a class="press-card-link" href="https://www.pemagazine.fr/pe-magazine-183-mars-2023/" target="_blank" rel="noopener">
             <p class="t-label">Private Equity Magazine · 2023</p>
             <p class="t-title">Les fonds se convertissent à la crypto — cover feature with Luc Jodet of XAnge</p>
