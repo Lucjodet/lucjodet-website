@@ -1,4 +1,4 @@
-# lucjodet.com
+# lucopedia.com
 
 Personal website of Luc Jodet — entrepreneur, investor, and PhD candidate at EPFL researching AI and job displacement.
 
@@ -18,6 +18,6 @@ Open `index.html` in a browser.
 2. On GitHub: Settings → Pages → Source: "Deploy from a branch" → Branch: `main`, folder `/ (root)` → Save.
 3. The site goes live at `https://<your-username>.github.io/lucjodet-website/` a minute later.
 
-### Custom domain (lucjodet.com)
+### Custom domain (lucopedia.com)
 
-In Settings → Pages, add `lucjodet.com` as the custom domain (GitHub creates a `CNAME` file), then point the domain's DNS: an `A`/`ALIAS` record to GitHub Pages, or a `CNAME` record from `www` to `<your-username>.github.io`.
+In Settings → Pages, add `lucopedia.com` as the custom domain (GitHub creates a `CNAME` file), then point the domain's DNS: an `A`/`ALIAS` record to GitHub Pages, or a `CNAME` record from `www` to `<your-username>.github.io`.
