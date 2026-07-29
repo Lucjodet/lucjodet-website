@@ -170,7 +170,7 @@
     border: 1px solid var(--line); z-index: 0;
   }
   .portrait {
-    position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5;
+    position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 4 / 5;
     object-fit: cover; display: block; background: var(--paper-deep);
     filter: saturate(0.92);
   }
@@ -264,7 +264,7 @@
   @media (max-width: 720px) { .talks-grid { grid-template-columns: 1fr; } }
   .talk-card { text-decoration: none; color: inherit; display: block; }
   .talk-card .thumb {
-    width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+    width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block;
     background: var(--paper-deep); filter: saturate(0.9); transition: filter .2s;
   }
   .talk-card:hover .thumb { filter: saturate(1.05); }
@@ -276,7 +276,7 @@
   @media (max-width: 720px) { .press-grid { grid-template-columns: 1fr; } }
   .press-card { text-decoration: none; color: inherit; display: block; }
   .press-card .thumb {
-    width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; display: block;
+    width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; display: block;
     background: var(--paper-deep); filter: saturate(0.9); transition: filter .2s;
   }
   a.press-card:hover .thumb { filter: saturate(1.05); }
@@ -356,7 +356,7 @@
       </div>
       <div>
         <div class="portrait-frame">
-          <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Luc Jodet" width="900" height="900" fetchpriority="high" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Luc Jodet" fetchpriority="high" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="portrait-fallback">LJ</div>
         </div>
       </div>
@@ -435,21 +435,21 @@
       <div class="sec-head"><span class="sec-num">03</span><h2>Press &amp; Interviews</h2></div>
       <div class="press-grid">
         <div class="press-card">
-          <img class="thumb zoomable" src="assets/private-equity-cover.svg" alt="Private Equity Magazine cover — Les fonds se convertissent à la crypto" width="610" height="800" loading="lazy" onclick="openLightbox('assets/private-equity-cover.svg', this.alt)">
+          <img class="thumb zoomable" src="assets/private-equity-cover.svg" alt="Private Equity Magazine cover — Les fonds se convertissent à la crypto" loading="lazy" onclick="openLightbox('assets/private-equity-cover.svg', this.alt)">
           <a class="press-card-link" href="https://www.pemagazine.fr/pe-magazine-183-mars-2023/" target="_blank" rel="noopener">
             <p class="t-label">Private Equity Magazine · 2023</p>
             <p class="t-title">Les fonds se convertissent à la crypto — cover feature with Luc Jodet of XAnge</p>
           </a>
         </div>
         <div class="press-card">
-          <img class="thumb zoomable" src="assets/cryptoast21-award.jpg" alt="Cryptoast21 — the 21 francophone crypto personalities of the year" width="520" height="520" loading="lazy" onclick="openLightbox('assets/cryptoast21-award.jpg', this.alt)">
+          <img class="thumb zoomable" src="assets/cryptoast21-award.jpg" alt="Cryptoast21 — the 21 francophone crypto personalities of the year" loading="lazy" onclick="openLightbox('assets/cryptoast21-award.jpg', this.alt)">
           <a class="press-card-link" href="https://journal.cryptoast.fr/cryptoast21/cryptoast21-edition-2023/" target="_blank" rel="noopener">
             <p class="t-label">Cryptoast Awards · 2023</p>
             <p class="t-title">Cryptoast21 — Luc Jodet named among France's leading Web3 and crypto figures</p>
           </a>
         </div>
         <div class="press-card">
-          <img class="thumb zoomable" src="assets/capital-hors-serie-cover.jpg" alt="Capital Hors-Série — Cryptomonnaies Web3 feature on Luc Jodet" width="520" height="610" loading="lazy" onclick="openLightbox('assets/capital-hors-serie-cover.jpg', this.alt)">
+          <img class="thumb zoomable" src="assets/capital-hors-serie-cover.jpg" alt="Capital Hors-Série — Cryptomonnaies Web3 feature on Luc Jodet" loading="lazy" onclick="openLightbox('assets/capital-hors-serie-cover.jpg', this.alt)">
           <a class="press-card-link" href="https://www.prismashop.fr/vn/les-archives-de-capital/VNHCP22NR.html" target="_blank" rel="noopener">
             <p class="t-label">Capital Hors-Série · 2024</p>
             <p class="t-title">Cryptomonnaies &amp; Web3 — profile of Luc Jodet, co-founder of Arianee and partner at XAnge</p>
@@ -544,17 +544,17 @@
       <div class="sec-head"><span class="sec-num">04</span><h2>Talks &amp; Podcasts</h2></div>
       <div class="talks-grid">
         <a class="talk-card" href="https://www.youtube.com/watch?v=IhtiGvAAvn0" target="_blank" rel="noopener">
-          <img class="thumb" src="https://img.youtube.com/vi/IhtiGvAAvn0/hqdefault.jpg" alt="The Self-Driving Economy — Crypto Valley" width="480" height="360" loading="lazy" onerror="this.style.visibility='hidden'">
+          <img class="thumb" src="https://img.youtube.com/vi/IhtiGvAAvn0/hqdefault.jpg" alt="The Self-Driving Economy — Crypto Valley" loading="lazy" onerror="this.style.visibility='hidden'">
           <p class="t-label">Crypto Valley Conference · 2025</p>
           <p class="t-title">The Self-Driving Economy: How Blockchain and AI Agents Will Reshape Everything</p>
         </a>
         <a class="talk-card" href="https://youtu.be/9DH_LjN3wWo" target="_blank" rel="noopener">
-          <img class="thumb" src="https://img.youtube.com/vi/9DH_LjN3wWo/hqdefault.jpg" alt="Speaking NFT — NFT.NYC 2023" width="480" height="360" loading="lazy" onerror="this.style.visibility='hidden'">
+          <img class="thumb" src="https://img.youtube.com/vi/9DH_LjN3wWo/hqdefault.jpg" alt="Speaking NFT — NFT.NYC 2023" loading="lazy" onerror="this.style.visibility='hidden'">
           <p class="t-label">NFT.NYC · 2023</p>
           <p class="t-title">Speaking NFT: How Creators Use NFTs to Have Better Conversations</p>
         </a>
         <a class="talk-card" href="https://youtu.be/7v6EOrYvacs" target="_blank" rel="noopener">
-          <img class="thumb" src="https://img.youtube.com/vi/7v6EOrYvacs/hqdefault.jpg" alt="Natixis CIB ExploreTech 2022 roundtable on digital assets" width="480" height="360" loading="lazy" onerror="this.style.visibility='hidden'">
+          <img class="thumb" src="https://img.youtube.com/vi/7v6EOrYvacs/hqdefault.jpg" alt="Natixis CIB ExploreTech 2022 roundtable on digital assets" loading="lazy" onerror="this.style.visibility='hidden'">
           <p class="t-label">Natixis CIB ExploreTech · 2022</p>
           <p class="t-title">2nd Roundtable: Digital Assets</p>
         </a>
