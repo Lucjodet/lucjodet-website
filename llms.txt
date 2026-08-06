@@ -26,6 +26,7 @@ He is now a PhD candidate at EPFL, studying how artificial intelligence transfor
 - [Homepage](https://www.lucjodet.com/): full biography, research, press coverage, and talks
 - [About](https://www.lucjodet.com/#about)
 - [Research](https://www.lucjodet.com/#research)
+- [Venture](https://www.lucjodet.com/#venture)
 - [Press & Interviews](https://www.lucjodet.com/#press)
 - [Talks & Podcasts](https://www.lucjodet.com/#talks)
 - [Contact](https://www.lucjodet.com/#contact)

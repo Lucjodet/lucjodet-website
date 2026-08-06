@@ -169,9 +169,14 @@
   }
   .nav a.link:hover { color: var(--accent); }
   @media (max-width: 640px) {
-    .nav { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .nav {
+      flex-direction: column; align-items: flex-start; gap: 10px;
+      padding-top: 14px; padding-bottom: 14px;
+    }
     .nav .brand { font-size: 15px; }
-    .nav ul { gap: 14px; flex-wrap: wrap; }
+    /* Six links no longer fit on one row at 375px — let them wrap onto a
+       second, tightly-spaced row rather than shrinking the type. */
+    .nav ul { gap: 6px 14px; flex-wrap: wrap; line-height: 1.4; }
     .nav a.link { font-size: 11px; letter-spacing: 0.08em; }
   }
 
@@ -223,6 +228,10 @@
   }
 
   /* ---------- Sections ---------- */
+  /* Keep anchored headings clear of the sticky header (67px desktop, up to
+     120px on mobile once the nav links wrap). */
+  section, footer { scroll-margin-top: 90px; }
+  @media (max-width: 640px) { section, footer { scroll-margin-top: 136px; } }
   section { padding: 70px 0; border-top: 1px solid var(--line); }
   .sec-head { display: flex; align-items: baseline; gap: 22px; margin-bottom: 42px; }
   .sec-num { font-family: var(--sans); font-size: 12px; color: var(--accent); letter-spacing: 0.15em; }
@@ -246,7 +255,7 @@
   }
 
   /* Ventures — two-column chronological timelines */
-  .ventures-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 48px; }
+  .ventures-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
   @media (max-width: 720px) { .ventures-grid { grid-template-columns: 1fr; gap: 44px; } }
   .venture-col .col-title {
     font-family: var(--sans); font-size: 12px; letter-spacing: 0.16em;
@@ -371,6 +380,7 @@
     <ul>
       <li><a class="link" href="#about">About</a></li>
       <li><a class="link" href="#research">Research</a></li>
+      <li><a class="link" href="#venture">Venture</a></li>
       <li><a class="link" href="#press">Press</a></li>
       <li><a class="link" href="#talks">Talks</a></li>
       <li><a class="link" href="#contact">Contact</a></li>
@@ -408,7 +418,26 @@
         <p>In 2017 he co-founded <strong>Arianee</strong>, the open protocol for digital product passports adopted by luxury houses such as Breitling, Lacoste and Panerai. Arianee raised over  $30&nbsp;million. He went on to co-found <strong>NFT Factory</strong>, the Paris hub for the French web3 ecosystem, and joined <strong>XAnge</strong> — one of Europe's leading early-stage venture firms — as a partner focused on web3 and crypto.</p>
         <p>He holds a Master's degree from <a href="https://www.sciencespo.fr/en/">SciencesPo</a>, and a Bachelor of Economics.</p>
       </div>
+    </div>
+  </section>
 
+  <section id="research">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">02</span><h2>Research</h2></div>
+      <div class="prose">
+        <p>After a decade operating at the edge of each successive technology wave, Luc is turning to the question that wave now poses to everyone else: <strong>what happens to work when intelligence becomes a commodity?</strong></p>
+      </div>
+      <div class="research-card">
+        <span class="tag">PhD · EPFL, Lausanne · In Progress</span>
+        <h3>AI and Job Displacement</h3>
+        <p>Doctoral research at <a href="https://epfl.ch">EPFL</a> (École Polytechnique Fédérale de Lausanne) examining how artificial intelligence transforms labor markets — which tasks and occupations are displaced, which are created, and how firms, workers and policymakers can navigate the transition. The work draws on Luc's operating experience deploying emerging technologies inside large organizations, from blockchain to AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="venture">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">03</span><h2>Venture</h2></div>
       <div class="ventures-grid">
         <div class="venture-col">
           <h3 class="col-title">Entrepreneurial</h3>
@@ -453,23 +482,9 @@
     </div>
   </section>
 
-  <section id="research">
-    <div class="wrap">
-      <div class="sec-head"><span class="sec-num">02</span><h2>Research</h2></div>
-      <div class="prose">
-        <p>After a decade operating at the edge of each successive technology wave, Luc is turning to the question that wave now poses to everyone else: <strong>what happens to work when intelligence becomes a commodity?</strong></p>
-      </div>
-      <div class="research-card">
-        <span class="tag">PhD · EPFL, Lausanne · In Progress</span>
-        <h3>AI and Job Displacement</h3>
-        <p>Doctoral research at <a href="https://epfl.ch">EPFL</a> (École Polytechnique Fédérale de Lausanne) examining how artificial intelligence transforms labor markets — which tasks and occupations are displaced, which are created, and how firms, workers and policymakers can navigate the transition. The work draws on Luc's operating experience deploying emerging technologies inside large organizations, from blockchain to AI.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="press">
     <div class="wrap">
-      <div class="sec-head"><span class="sec-num">03</span><h2>Press &amp; Interviews</h2></div>
+      <div class="sec-head"><span class="sec-num">04</span><h2>Press &amp; Interviews</h2></div>
       <div class="press-grid">
         <div class="press-card">
           <img class="thumb zoomable" src="assets/private-equity-cover.jpg" alt="Private Equity Magazine cover — Les fonds se convertissent à la crypto" loading="lazy" onclick="openLightbox('assets/private-equity-cover.jpg', this.alt)">
@@ -578,7 +593,7 @@
 
   <section id="talks">
     <div class="wrap">
-      <div class="sec-head"><span class="sec-num">04</span><h2>Talks &amp; Podcasts</h2></div>
+      <div class="sec-head"><span class="sec-num">05</span><h2>Talks &amp; Podcasts</h2></div>
       <div class="talks-grid">
         <a class="talk-card" href="https://www.youtube.com/watch?v=IhtiGvAAvn0" target="_blank" rel="noopener">
           <img class="thumb" src="https://img.youtube.com/vi/IhtiGvAAvn0/hqdefault.jpg" alt="The Self-Driving Economy — Crypto Valley" loading="lazy" onerror="this.style.visibility='hidden'">
