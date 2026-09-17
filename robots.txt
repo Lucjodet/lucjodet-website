@@ -28,4 +28,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://www.lucjodet.com/sitemap.xml
+Sitemap: https://lucjodet.com/sitemap.xml
