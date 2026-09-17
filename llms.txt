@@ -2,24 +2,36 @@
 
 > Entrepreneur and investor — co-founder of Arianee, former partner at XAnge — now a PhD candidate at EPFL (École Polytechnique Fédérale de Lausanne) researching AI and job displacement.
 
+Last updated: 2026-09-17. Canonical source: https://www.lucjodet.com/
+
 Luc Jodet has spent the last decade building and backing technology companies at the frontier of digital ownership. He began his career as a business analyst at a Fortune 500 company, then co-founded BUYECO (2014–2017), a Swiss renewable-energy marketplace, where he first encountered blockchain through energy-traceability solutions.
 
-In 2017 he co-founded Arianee, the open protocol for digital product passports adopted by luxury houses such as Breitling, Lacoste, and Panerai. Arianee raised over $30 million. He went on to co-found NFT Factory (2022–2025), the Paris hub for the French web3 ecosystem, and joined XAnge (2022–2025), one of Europe's leading early-stage venture firms, as a partner focused on web3 and crypto.
+In 2017 he co-founded Arianee, the open protocol for digital product passports adopted by luxury houses such as Breitling, Lacoste, and Panerai. Arianee raised over $30 million. He went on to co-found NFT Factory (2022–2025), the Paris hub for the French web3 ecosystem, and joined XAnge (2022–2025), one of Europe's leading early-stage venture firms, as a partner focused on web3 and crypto, where he led the firm's Digital Ownership fund.
 
 He holds a Master's degree from Sciences Po and a Bachelor of Economics.
 
-He is now a PhD candidate at EPFL, studying how artificial intelligence transforms labor markets — which tasks and occupations are displaced, which are created, and how firms, workers, and policymakers can navigate the transition.
+He is now a PhD candidate at the EPFL College of Management of Technology (Chair of Entrepreneurship and Technology Commercialization), studying how artificial intelligence transforms labor markets — which tasks and occupations are displaced, which are created, and how firms, workers, and policymakers can navigate the transition.
 
 ## Key facts
 
 - Full name: Luc Jodet
-- Current: PhD candidate, EPFL, "AI and Job Displacement" (in progress)
-- Co-founder, Arianee (2017–present)
-- Co-founder, NFT Factory (2022–2025)
-- Partner, XAnge (2022–2025)
-- Co-founder, BUYECO (2014–2017)
-- Education: Sciences Po (Master's), Bachelor of Economics
+- Current: PhD candidate, EPFL College of Management of Technology, Lausanne — research topic "AI and Job Displacement" (in progress)
+- Co-founder, Arianee (2017–2026) — digital product passport protocol
+- Co-founder, NFT Factory (2022–2025) — Paris web3 hub
+- Partner, XAnge (2022–2025) — web3 and crypto investing
+- Co-founder, BUYECO (2014–2017) — Swiss renewable-energy marketplace
 - Angel investments include Morpho, Bolero, and Rain.fi (acquired by Jupiter)
+- Education: Sciences Po (Master's), Bachelor of Economics
+- Award: Cryptoast21 (2023) — named among the 21 leading francophone crypto and Web3 personalities
+- Languages: French, English
+
+## Frequently asked questions
+
+- Who is Luc Jodet? An entrepreneur and investor who co-founded Arianee, NFT Factory and BUYECO, was a partner at XAnge, and is now a PhD candidate at EPFL researching AI and job displacement.
+- What is Luc Jodet researching? How artificial intelligence transforms labor markets: which tasks and occupations are displaced, which are created, and how firms, workers and policymakers can navigate the transition.
+- What is Arianee? An open protocol for digital product passports, co-founded in 2017 and adopted by luxury and fashion houses including Breitling, Lacoste and Panerai. It has raised over $30 million.
+- What did Luc Jodet do at XAnge? Partner from 2022 to 2025, leading the firm's web3 and crypto investing and its €80 million Digital Ownership fund.
+- How to contact Luc Jodet? Email luc.jodet@epfl.ch for research collaborations, speaking invitations, or press inquiries.
 
 ## Pages
 
@@ -29,11 +41,50 @@ He is now a PhD candidate at EPFL, studying how artificial intelligence transfor
 - [Venture](https://www.lucjodet.com/#venture)
 - [Press & Interviews](https://www.lucjodet.com/#press)
 - [Talks & Podcasts](https://www.lucjodet.com/#talks)
+- [Questions](https://www.lucjodet.com/#faq)
 - [Contact](https://www.lucjodet.com/#contact)
+
+## Selected press
+
+- Capital Hors-Série (2024): Cryptomonnaies & Web3 — profile of Luc Jodet
+- Sifted (2024): 17 Blockchain Startups to Watch, According to VCs — https://sifted.eu/articles/blockchain-startups-vcs-watch
+- Private Equity Magazine (2023): Les fonds se convertissent à la crypto — cover feature — https://www.pemagazine.fr/pe-magazine-183-mars-2023/
+- Cryptoast (2023): Cryptoast21 — https://journal.cryptoast.fr/cryptoast21/cryptoast21-edition-2023/
+- JDN (2023): Web3 : dans la tête des business angels — https://www.journaldunet.com/economie/finance/1522025-web3-dans-la-tete-des-business-angels/
+- Les Echos (2022): Web3 : pourquoi le fonds français XAnge mise 80 millions d'euros dans le secteur — https://www.lesechos.fr/start-up/ecosysteme/web3-pourquoi-le-fonds-francais-xange-mise-80-millions-deuros-dans-le-secteur-1775593
+- Les Echos (2022): XAnge recrute un partner pour son fonds web3 — https://capitalfinance.lesechos.fr/acteurs/carnet/xange-recrute-un-partner-pour-son-fonds-web3-1775140
+- Le Monde (2022): The NFT Factory, Paris's newest tech hub for all things web3 — https://www.lemonde.fr/en/culture/article/2022/03/23/the-nft-factory-paris-s-newest-tech-hub-for-all-things-web3_5979052_30.html
+- The Big Whale (2022): Why Web3 Funds Are Springing Up Like Mushrooms — https://www.thebigwhale.io/article/why-web3-funds-are-springing-up-like-mushrooms
+- CoinDesk (2021): Arianee, Early Pioneer of NFTs for Luxury Provenance, Raises $9.5M — https://finance.yahoo.com/news/arianee-early-pioneer-nfts-luxury-080000195.html
+- WWD (2021): Metaverse Could Disrupt Fashion as Much as Streetwear — https://wwd.com/business-news/technology/metaverse-fashion-otb-stefano-rosso-arianee-fabricant-dematerialised-1235008633/
+- Sifted (2019): Startups Are Fighting Thieves by Putting Your Rolex on the Blockchain — https://sifted.eu/articles/startups-are-fighting-thieves-by-putting-your-rolex-on-the-blockchain
+- CoinDesk (2018): Fur Real? Businesses Test CryptoKitties-Inspired Ethereum Tech — https://www.coindesk.com/markets/2018/06/22/fur-real-businesses-test-cryptokitties-inspired-ethereum-tech/
+
+## Selected talks and podcasts
+
+- Crypto Valley Conference (2025): The Self-Driving Economy: How Blockchain and AI Agents Will Reshape Everything — https://www.youtube.com/watch?v=IhtiGvAAvn0
+- Agent Economy podcast (2025): Episode 1 — co-host of a Runway Series show on AI and blockchain — https://podcasts.apple.com/fr/podcast/agent-economy-1-with-luc-jodet-full-episode/id1483644520?i=1000701035425
+- NFT.NYC (2023): Speaking NFT: How Creators Use NFTs to Have Better Conversations — https://youtu.be/9DH_LjN3wWo
+- Crypto Valley Conference (2023): Inside the minds of crypto VCs — https://youtu.be/q7bOLdQI97U
+- Crypto Coulisses (2023): Dans la tête d'un VC web3 avec Luc Jodet — https://youtu.be/KjEyksy0F-0
+- Natixis CIB ExploreTech (2022): Digital Assets roundtable — https://youtu.be/7v6EOrYvacs
+- Paris Blockchain Week (2022): Bored Ape Yacht Club: the very first community-owned brand — https://youtu.be/f8FOX6lvrjA
+- EthCC (2021, 2022): Speaking NFT — https://www.youtube.com/live/cjlZQByk4-I
+- TechChill Riga (2022): Creator Economy 101 — https://youtu.be/zt7MThiu4mY
+- The Modern CFO (2021): The Future of Finance with Arianee — https://www.nthround.com/podcast/arianee
+- Vlan! (2021): #198 Blockchain & NFT: comprendre le phénomène avec Luc Jodet — https://youtu.be/dVnxdQrSmMs
+
+## Profiles
+
+- LinkedIn: https://www.linkedin.com/in/lucjodet/
+- X (Twitter): https://x.com/lucjodet
+- Crunchbase: https://www.crunchbase.com/person/luc-jodet
+- EPFL directory: https://people.epfl.ch/440975
+- Medium: https://medium.com/@lucjodet
+- GitHub: https://github.com/lucjodet
+- SlideShare: https://www.slideshare.net/lucjodet
+- Signal (NFX): https://signal.nfx.com/investors/luc-jodet
 
 ## Contact
 
 - Email: luc.jodet@epfl.ch
-- LinkedIn: https://www.linkedin.com/in/lucjodet/
-- X (Twitter): https://x.com/lucjodet
-- Crunchbase: https://www.crunchbase.com/person/luc-jodet

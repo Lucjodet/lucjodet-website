@@ -1,0 +1,56 @@
+# On every content push to main:
+#   1. stamp <lastmod> in sitemap.xml and "dateModified" in index.html with today's date,
+#      so search engines see a real change signal instead of a stale date;
+#   2. commit that stamp back (pushes made with GITHUB_TOKEN do not re-trigger this workflow);
+#   3. after GitHub Pages has had time to deploy, ping IndexNow (Bing, Yandex, Naver, Seznam).
+#
+# If the canonical host ever changes (e.g. to the apex domain), update SITE_URL below.
+name: Stamp dates and ping IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - llms.txt
+      - sitemap.xml
+      - assets/**
+
+permissions:
+  contents: write
+
+env:
+  SITE_URL: https://www.lucjodet.com/
+  INDEXNOW_KEY: 2142e693cc1bbffbaf1940a48dac400c
+
+jobs:
+  stamp-and-ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stamp lastmod and dateModified with today's date
+        run: |
+          TODAY=$(date -u +%F)
+          sed -i -E "s#<lastmod>[0-9-]+</lastmod>#<lastmod>${TODAY}</lastmod>#" sitemap.xml
+          sed -i -E "s#\"dateModified\": \"[0-9-]+\"#\"dateModified\": \"${TODAY}\"#" index.html
+          echo "TODAY=${TODAY}" >> "$GITHUB_ENV"
+
+      - name: Commit the stamp if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Dates already current; nothing to commit."
+          else
+            git commit -am "Stamp lastmod/dateModified ${TODAY}"
+            git push
+          fi
+
+      - name: Wait for GitHub Pages to deploy
+        run: sleep 120
+
+      - name: Ping IndexNow
+        run: |
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" \
+            "https://api.indexnow.org/indexnow?url=${SITE_URL}&key=${INDEXNOW_KEY}&keyLocation=${SITE_URL}${INDEXNOW_KEY}.txt"
