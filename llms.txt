@@ -2,7 +2,7 @@
 
 > Entrepreneur and investor — co-founder of Arianee, former partner at XAnge — now a PhD candidate at EPFL (École Polytechnique Fédérale de Lausanne) researching AI and job displacement.
 
-Last updated: 2026-09-17. Canonical source: https://lucjodet.com/
+Last updated: 2026-09-18. Canonical source: https://lucjodet.com/
 
 Luc Jodet has spent the last decade building and backing technology companies at the frontier of digital ownership. He began his career as a business analyst at a Fortune 500 company, then co-founded BUYECO (2014–2017), a Swiss renewable-energy marketplace, where he first encountered blockchain through energy-traceability solutions.
 
@@ -76,6 +76,7 @@ He is now a PhD candidate at the EPFL College of Management of Technology (Chair
 
 ## Profiles
 
+- Wikidata: https://www.wikidata.org/wiki/Q141494993
 - LinkedIn: https://www.linkedin.com/in/lucjodet/
 - X (Twitter): https://x.com/lucjodet
 - Crunchbase: https://www.crunchbase.com/person/luc-jodet
