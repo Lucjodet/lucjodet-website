@@ -32,8 +32,12 @@ jobs:
       - name: Stamp lastmod and dateModified with today's date
         run: |
           TODAY=$(date -u +%F)
+          # Google's ProfilePage spec wants a full ISO 8601 datetime with an
+          # offset for dateCreated/dateModified; a bare date is reported as
+          # "Invalid datetime value". <lastmod> is fine as a plain date.
+          NOW=$(date -u +%FT%T+00:00)
           sed -i -E "s#<lastmod>[0-9-]+</lastmod>#<lastmod>${TODAY}</lastmod>#" sitemap.xml
-          sed -i -E "s#\"dateModified\": \"[0-9-]+\"#\"dateModified\": \"${TODAY}\"#" index.html
+          sed -i -E "s#\"dateModified\": \"[0-9T:+-]+\"#\"dateModified\": \"${NOW}\"#" index.html
           echo "TODAY=${TODAY}" >> "$GITHUB_ENV"
 
       - name: Commit the stamp if anything changed
